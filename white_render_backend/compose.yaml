@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    command: ["white-render", "serve", "--host", "0.0.0.0"]
+    env_file: .env
+    ports: ["127.0.0.1:8018:8018"]
+    volumes: ["./work:/data/work", "./private:/run/private:ro"]
+    restart: unless-stopped
+  worker:
+    build: .
+    command: ["white-render", "worker"]
+    env_file: .env
+    volumes: ["./work:/data/work", "./private:/run/private:ro"]
+    restart: unless-stopped
