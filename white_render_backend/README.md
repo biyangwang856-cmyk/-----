@@ -10,4 +10,4 @@
 
 先解压并进入本目录再安装。代码包包含用户要求的新密钥 private/minimaxapi.docx，仅供后端私下部署；别把它发到浏览器或公开仓库。Docker 平台令牌在 .env；Windows 启动令牌在 work/local-auth.private.json。
 
-生成白模在 worker 所在电脑/服务器运行；H3 在云端运行。前端同学本机启动本包，就使用她本机 CPU 生成白模；连接你的后端则在你的机器生成。本地 GPU 不是必需。
+生成白模在 worker 所在电脑/服务器运行；H3 在云端运行。
